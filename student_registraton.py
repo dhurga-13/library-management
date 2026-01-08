@@ -20,7 +20,7 @@ def main():
     print("=== Student Registration Module ===")
 
     # Creating a student object
-    student = Student(216, "kalai", "CSE")
+    student = Student(216, "Kalai", "AI & DS")
     student.display_details()
 
     # Day-wise change starts here 👇
