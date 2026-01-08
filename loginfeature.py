@@ -10,21 +10,31 @@ class Student:
         print(f"Name      : {self.name}")
         print(f"Department: {self.department}")
 
-    # Feature 1 (Day 1)
-    def update_department(self, new_department):
-        self.department = new_department
-        print("Department updated successfully!")
+
+class Login:
+    def __init__(self, username, password):
+        self.username = username
+        self.password = password
+
+    def authenticate(self):
+        if self.username == "admin" and self.password == "admin123":
+            print("Login successful!")
+            return True
+        else:
+            print("Invalid username or password")
+            return False
 
 
 def main():
     print("=== Student Registration Module ===")
 
-    # Creating a student object
-    student = Student(216, "kalai", "CSE")
+    login = Login("admin", "admin123")
+    if not login.authenticate():
+        return
+
+    student = Student(101, "Arun", "CSE")
     student.display_details()
 
-    # Day-wise change starts here 👇
-    student.update_department("AI & DS")
-    student.display_details()
+
 if __name__ == "__main__":
     main()
